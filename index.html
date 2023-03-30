@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Cute Seal Name Generator</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      text-align: center;
+      margin: 0;
+      padding: 0;
+    }
+    h1 {
+      margin-top: 2em;
+      margin-bottom: 1em;
+    }
+    #generated-name {
+      font-size: 1.5em;
+      font-weight: bold;
+      margin-top: 2em;
+    }
+    button {
+      background-color: #4CAF50;
+      border: none;
+      color: white;
+      padding: 1em 2em;
+      text-align: center;
+      text-decoration: none;
+      display: inline-block;
+      font-size: 1.2em;
+      margin-top: 2em;
+      cursor: pointer;
+    }
+    button:hover {
+      background-color: #3e8e41;
+    }
+  </style>
+</head>
+<body>
+  <h1>Cute Seal Name Generator</h1>
+  <button id="generate-name-btn">Generate Name</button>
+  <div id="generated-name"></div>
+  <script>
+    const seals = ["Harbor Seal", "Harp Seal", "Northern Elephant Seal", "Bearded Seal", "Ringed Seal", "Grey Seal", "Weddell Seal", "Leopard Seal", "Southern Elephant Seal", "Crabeater Seal", "Ross Seal", "Hooded Seal", "Ribbon Seal", "Spotted Seal", "Harlequin Seal", "Baikal Seal", "Saimaa Seal", "Caspian Seal", "Mediterranean Monk Seal", "Caribbean Monk Seal", "Hawaiian Monk Seal", "Northern Fur Seal", "Guadalupe Fur Seal", "Galapagos Fur Seal", "New Zealand Fur Seal", "Australian Fur Seal", "Steller Sea Lion", "California Sea Lion", "South American Sea Lion", "New Zealand Sea Lion", "Walrus", "Leatherback Turtle", "Green Sea Turtle"];
+    const cuteNames = ["Bubbles", "Peanut", "Cupcake", "Buttercup", "Fluffy", "Waffles", "Muffin", "Sunny", "Honey", "Tulip", "Buddy", "Snickers", "Puddles", "Ginger", "Pumpkin", "Cinnamon", "Bluebell", "Coco", "Pebbles", "Blossom", "Gizmo", "Oreo", "Pippin", "Willow", "Cherry", "Mango", "Sprinkles", "Taffy", "Whiskers", "Scooter", "Snoopy", "Sushi", "Taco", "Toto", "Yoda", "Ziggy", "Zoe", "Alfie", "Angel", "Bailey", "Bentley", "Bobby", "Casper", "Charlie", "Daisy", "Dexter", "Eddie", "Finn", "Gatsby", "Gus", "Hazel", "Izzy", "Jack", "Jasper", "Kiki", "Lila", "Lily", "Lola", "Louie", "Lucy", "Maggie", "Max", "Milo", "Molly", "Nala", "Oliver", "Oscar", "Penny", "Piper", "Riley", "Rocky", "Rosie", "Ruby", "Sadie", "Sasha", "Scout", "Simba", "Sophie", "Toby", "Zeus"];
+
+    function generateName() {
+      const randomSeal = seals[Math.floor(Math.random() * seals.length)];
+      const randomCuteName = cuteNames[Math.floor(Math.random() * cuteNames.length)];
+      return `${randomCuteName} the ${randomSeal}`;
+    }
+
+    document.getElementById("generate-name-btn").addEventListener("click", function() {
+      const generatedNameElement = document.getElementById("generated-name");
+      generatedNameElement.textContent = generateName();
+    });
+
+  </script>
+</body>
+</html>
+
